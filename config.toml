@@ -3,3 +3,8 @@ languageCode = "en-us"
 title = "brkcmd"
 pygmentsuseclasses = true
 theme = "base16"
+
+[taxonomies]
+tag = "tags"
+category = "categories"
+series = "series"
