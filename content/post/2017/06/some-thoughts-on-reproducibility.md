@@ -1,6 +1,9 @@
 +++
 date = "2017-06-03T09:50:30-04:00"
 title = "Some thoughts on reproducibility."
+aliases = [
+    "/post/2017/06/some-thoughts-on-reproducibility/"
+]
 categories = [ "Science" ]
 tags = [ "videos", "science", "reproducibility", "pycon us", "pycon us 2017" ]
 +++

@@ -4,6 +4,7 @@ title = "brkcmd"
 pygmentsuseclasses = true
 pygmentscodefences = true
 theme = "base16"
+uglyurls = true
 
 [taxonomies]
 tag = "tags"

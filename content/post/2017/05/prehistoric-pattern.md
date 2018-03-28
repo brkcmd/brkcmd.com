@@ -1,6 +1,9 @@
 +++
 date = "2017-05-31T19:39:26-04:00"
 title = "A prehistoric pattern."
+aliases = [
+    "/post/2017/05/prehistoric-pattern/"
+]
 categories = [ "Programming", "Python" ]
 tags = [ "python", "videos", "pycon us", "pycon us 2017" ]
 +++
