@@ -1,9 +1,7 @@
 baseurl = "https://www.flaky.io/"
 languageCode = "en-us"
 title = "brkcmd"
-pygmentsuseclasses = true
-pygmentscodefences = true
-theme = "base16"
+theme = "tanaka"
 uglyurls = true
 
 [taxonomies]

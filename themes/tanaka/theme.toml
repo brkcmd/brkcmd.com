@@ -1,0 +1,12 @@
+name = "Tanaka"
+license = "MIT"
+# licenselink = ""
+# description = ""
+# homepage = ""
+tags = ["blog", "syntax highlighting"]
+features = ["blog", "syntax highlighting"]
+min_version = "0.37"
+
+[author]
+  name = "brkcmd"
+  # homepage = ""

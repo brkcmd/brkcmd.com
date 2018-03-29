@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+<head>
+<meta charset="utf-8">
+{{ with .Description }}
+<meta name="description" content="{{ . }}">
+{{ end }}
+{{ with .Keywords }}
+<meta name="keywords" content="{{ delimit .  "," }}">
+{{ end }}
+{{ with .Site.Params.author }}
+<meta name="author" content="{{ .Site.Params.author }}">
+{{ end }}
+{{ .Hugo.Generator }}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{{ "/css/style.css" | relURL }}" type="text/css">
+<link rel="alternate" href="{{ "/index.atom.xml" | relURL }}" type="application/atom+xml" title="{{ .Site.Title }} Feed">
+<title>{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}</title>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <a class="path" href="{{ .Site.BaseURL }}">[{{ .Site.Title }}]</a>
+    <span class="caret"># _</span>
+    <div class="right">
+      {{ range $i, $page := (where .Site.Pages "Section" "pages") }}
+        {{ if not (eq $i 0) }}|{{ end }}
+        <a class="path" href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>
+      {{ end }}
+    </div>
+  </div>
+</header>
+
+<div class="container">
