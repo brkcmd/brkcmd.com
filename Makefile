@@ -16,6 +16,11 @@ build:
 	$(if $(HUGO),,$(error "hugo not found, try running `apt install hugo`"))
 	$(HUGO) --cleanDestinationDir --destination public -v
 
+.PHONY: serve
+serve:
+	$(if $(HUGO),,$(error "hugo not found, try running `apt install hugo`"))
+	$(HUGO) server --disableFastRender --buildDrafts --buildFuture
+
 .PHONY: clean
 clean:
 	-rm -r public
