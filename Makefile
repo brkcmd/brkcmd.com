@@ -11,14 +11,14 @@ HUGO = $(shell command -v hugo ; )
 NETLIFY = $(shell command -v netlify ; )
 POSTCSS = $(shell command -v postcss ; )
 
-.PHONY: clean
-clean:
-	-rm -r public
-
 .PHONY: build
 build:
 	$(if $(HUGO),,$(error "hugo not found, try running `apt install hugo`"))
-	$(HUGO) --cleanDestinationDir --destination public
+	$(HUGO) --cleanDestinationDir --destination public -v
+
+.PHONY: clean
+clean:
+	-rm -r public
 
 .PHONY: deploy
 deploy: build
