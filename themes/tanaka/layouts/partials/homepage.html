@@ -19,7 +19,7 @@
     <ul>
     {{ range $name, $value := . }}
       <li>
-        <a href="{{ $baseurl }}categories/{{ $name | urlize }}">{{ title $name }}</a>
+        <a href="{{ $baseurl }}categories/{{ $name | urlize }}.html">{{ title $name }}</a>
         <small>({{ .Count }})</small>
       </li>
     {{ end }}
@@ -36,7 +36,7 @@
     <ul>
     {{ range $name, $value := . }}
       <li>
-        <a href="{{ $baseurl }}tags/{{ $name | urlize }}">{{ $name }}</a>
+        <a href="{{ $baseurl }}tags/{{ $name | urlize }}.html">{{ $name }}</a>
         <small>({{ .Count }})</small>
       </li>
     {{ end }}

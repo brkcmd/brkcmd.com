@@ -2,15 +2,15 @@
 <html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
 <head>
 <meta charset="utf-8">
-{{ with .Description }}
+{{ with .Description -}}
 <meta name="description" content="{{ . }}">
-{{ end }}
-{{ with .Keywords }}
+{{ end -}}
+{{ with .Keywords -}}
 <meta name="keywords" content="{{ delimit .  "," }}">
-{{ end }}
-{{ with .Site.Params.author }}
+{{ end -}}
+{{ with .Site.Params.author -}}
 <meta name="author" content="{{ .Site.Params.author }}">
-{{ end }}
+{{ end -}}
 {{ .Hugo.Generator }}
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}" type="text/css">

@@ -5,9 +5,9 @@ theme = "tanaka"
 uglyurls = true
 
 [taxonomies]
-tag = "tags"
-category = "categories"
-series = "series"
+    tag = "tags"
+    category = "categories"
+    series = "series"
 
 [outputs]
     home = [ "HTML", "Atom" ]
