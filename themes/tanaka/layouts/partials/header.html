@@ -14,7 +14,17 @@
 {{ .Hugo.Generator }}
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}" type="text/css">
-<link rel="alternate" href="{{ "/index.atom.xml" | relURL }}" type="application/atom+xml" title="{{ .Site.Title }} Feed">
+{{ with .Site.GetPage "home" }}{{ range .OutputFormats }}{{ if ne .Name "HTML" -}}
+{{ $media_type_suffix := cond (eq .Name "atom") "xml" "" -}}
+<link rel="{{ .Rel }}" href="{{ .Permalink | relURL }}" type="{{ .MediaType.Type }}{{ with $media_type_suffix }}+{{.}}{{ end }}" title="{{ $.Site.Title }} ({{ .Name | title }} Feed)">
+{{- end }}{{ end }}{{ end }}
+{{ if eq .Page.Kind "taxonomy" -}}
+{{ $collective_phrase := index .Site.Params.collectivephrases .Data.Singular | default "marked as" -}}
+{{ $feed_title := printf "Posts %s %s on %s" $collective_phrase (title .Page.Data.Term) .Site.Title -}}
+{{ range .AlternativeOutputFormats -}}
+{{ $media_type_suffix := cond (eq .Name "atom") "xml" "" -}}
+<link rel="{{ .Rel }}" href="{{ .RelPermalink }}" type="{{ .MediaType.Type }}{{ with $media_type_suffix}}+{{.}}{{end}}" title="{{ $feed_title }} ({{ .Name | title }} Feed)">
+{{- end }}{{ end }}
 <title>{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}</title>
 </head>
 <body>

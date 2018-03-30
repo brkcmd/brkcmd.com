@@ -8,3 +8,24 @@ uglyurls = true
 tag = "tags"
 category = "categories"
 series = "series"
+
+[outputs]
+    home = [ "HTML", "Atom" ]
+    section = [ "HTML", "Atom" ]
+    taxonomy = [ "HTML", "Atom" ]
+
+[mediaTypes]
+    [mediaTypes."application/atom"]
+        suffix = "atom.xml"
+
+    [outputFormats.Atom]
+        mediaType = "application/atom"
+        baseName = "index"
+        isPlainText = false
+
+[params]
+    feedlimit = 20
+    [params.collectivephrases]
+        tag = "tagged as"
+        category = "categorized as"
+        series = "in the series"
