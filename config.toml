@@ -18,6 +18,7 @@ uglyurls = true
     [mediaTypes."application/atom"]
         suffix = "atom.xml"
 
+[outputFormats]
     [outputFormats.Atom]
         mediaType = "application/atom"
         baseName = "index"
