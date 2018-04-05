@@ -16,6 +16,13 @@ build:
 	$(if $(HUGO),,$(error "hugo not found, try running `apt install hugo`"))
 	$(HUGO) --cleanDestinationDir --destination public -v
 
+.PHONY: build-tanaka build-tanaka-css 
+build-tanaka: build-tanaka-css
+
+build-tanaka-css:
+	$(if $(POSTCSS),,$(error "postcss not found, try running `npm i`"))
+	$(POSTCSS) themes/tanaka/static/css/site-source.css -o themes/tanaka/static/css/site.css
+
 .PHONY: serve
 serve:
 	$(if $(HUGO),,$(error "hugo not found, try running `apt install hugo`"))
