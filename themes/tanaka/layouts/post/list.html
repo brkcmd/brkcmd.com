@@ -1,0 +1,8 @@
+{{ partial "header.html" . }}
+<main role="main" class="h-feed" itemscope itemtype="http://schema.org/Blog">
+  <h1 class="list-title p-name">{{ .Title }}</h1>
+  {{ range .Data.Pages }}
+    {{ partial "post-list-item.html" . }}
+  {{ end }}
+</main>
+{{ partial "footer.html" . }}

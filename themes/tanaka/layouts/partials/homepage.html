@@ -1,48 +1,13 @@
-{{ $baseurl := .Site.BaseURL }}
-{{ $postlimit := .Site.Params.homepagepostlimit | default "5" }}
-{{ $postsection := .Site.Params.postsection | default "post" }}
-<main role="main" class="homepage">
+{{ $postlimit := .Site.Params.homepagepostlimit | default "5" -}}
+{{ $postsection := .Site.Params.postsection | default "post" -}}
+<main role="main" class="homepage h-feed" itemscope itemtype="http://schema.org/Blog">
 
-  <h1 class="headline">Recent Posts</h1>
+    <h1 class="headline p-name">Recent Posts</h1>
 
-  <div class="article-list">
-    {{ range first $postlimit (where .Data.Pages "Section" $postsection) }}
-      {{ partial "article-list-item.html" . }}
-    {{ end }}
-  </div>
-
-{{ with .Site.Taxonomies.categories }}
-
-  <nav class="categories">
-    <h1 class="headline">Categories</h1>
-
-    <ul>
-    {{ range $name, $value := . }}
-      <li>
-        <a href="{{ $baseurl }}categories/{{ $name | urlize }}.html">{{ title $name }}</a>
-        <small>({{ .Count }})</small>
-      </li>
-    {{ end }}
-    </ul>
-  </nav>
-
-{{ end }}
-
-{{ with .Site.Taxonomies.tags }}
-
-  <nav class="tags">
-    <h1 class="headline">Tags</h1>
-
-    <ul>
-    {{ range $name, $value := . }}
-      <li>
-        <a href="{{ $baseurl }}tags/{{ $name | urlize }}.html">{{ $name }}</a>
-        <small>({{ .Count }})</small>
-      </li>
-    {{ end }}
-    </ul>
-  </nav>
-
-{{ end }}
+    <div class="article-list">
+        {{ range first $postlimit (where .Data.Pages "Section" $postsection) }}
+        {{ partial "post-list-item.html" . }}
+        {{ end }}
+    </div>
 
 </main>

@@ -1,0 +1,13 @@
+{{ partial "header.html" . }}
+<main role="main">
+    <h1 class="list-title">{{ .Title }}</h1>
+    <ul>
+        {{ range .Data.Terms.Alphabetical }}
+        <li>
+            <a href="{{ "/" | relLangURL }}/{{ $.Page.Data.Plural | urlize }}/{{ .Name | urlize }}.html">{{ .Name | title }}</a>
+            <small>({{ .Count }})</small>
+        </li>
+        {{ end }}
+    </ul>
+</main>
+{{ partial "footer.html" . }}
