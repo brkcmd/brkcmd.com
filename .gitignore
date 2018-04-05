@@ -1,2 +1,3 @@
 .netlify
 /public/
+/node_modules/
