@@ -30,3 +30,6 @@ uglyurls = true
         tag = "tagged as"
         category = "categorized as"
         series = "in the series"
+    [params.license]
+        name = "CC-BY-SA 4.0"
+        url = "https://creativecommons.org/licenses/by-sa/4.0/"

@@ -1,48 +1,51 @@
-    {{ with $.Site.Taxonomies.categories -}}
-    <nav class="categories">
-        <h1 class="headline">Categories</h1>
+    <aside class="sidebar">
+        {{ with $.Site.Taxonomies.categories -}}
+        <nav class="sidebar categories">
+            <h2 class="headline">Categories</h1>
 
-        <ul>
-            {{ range $name, $value := . }}
-            <li>
-                <a href="{{ "/" | relLangURL }}categories/{{ $name | urlize }}.html">{{ $name | title }}</a>
-                <small>({{ .Count }})</small>
-            </li>
-            {{ end }}
-        </ul>
-    </nav>
-    {{ end }}
+            <ul>
+                {{ range $name, $value := . }}
+                <li>
+                    <a href="{{ "/" | relLangURL }}categories/{{ $name | urlize }}.html">{{ $name | title }}</a>
+                    <small>({{ .Count }})</small>
+                </li>
+                {{ end }}
+            </ul>
+        </nav>
+        {{ end }}
 
-    {{ with $.Site.Taxonomies.tags -}}
-    <nav class="tags">
-        <h1 class="headline">Tags</h1>
+        {{ with $.Site.Taxonomies.tags -}}
+        <nav class="sidebar tags">
+            <h2 class="headline">Tags</h1>
 
-        <ul>
-            {{ range $name, $value := . }}
-            <li>
-                <a href="{{ "/" | relLangURL }}tags/{{ $name | urlize }}.html">{{ $name }}</a>
-                <small>({{ .Count }})</small>
-            </li>
-            {{ end }}
-        </ul>
-    </nav>
-    {{ end }}
+            <ul>
+                {{ range $name, $value := . }}
+                <li>
+                    <a href="{{ "/" | relLangURL }}tags/{{ $name | urlize }}.html">{{ $name }}</a>
+                    <small>({{ .Count }})</small>
+                </li>
+                {{ end }}
+            </ul>
+        </nav>
+        {{ end }}
+    </aside>
+
+    <footer class="footer">
+        <span class="copyright">
+            {{ $dateMissing := eq .Date.Year 1 -}}
+            © {{ if eq $dateMissing true }}{{ .Site.LastChange.Format "2006" }}{{ else }}{{ .Date.Format "2006" }} {{ end }} {{ .Site.Title }}.
+            {{ with .Site.Params.license }}<a href="{{ .url }} ">{{ .name }}</a>.{{ end }}
+            {{ with .Site.GetPage "page" "licenses.md" }}<a href="{{ .Permalink }}">Licenses</a>.{{ end }}
+            {{ with .Site.GetPage "page" "colophon.md" }}<a href="{{ .Permalink }}">Colophon</a>.{{ end }}
+        </span>
+    </footer>
 
 </div>{{/* /container */}}
 
-<header>
-    <a href="{{ "/" | relLangURL }}">[{{ .Site.Title }}]</a>
-    <span class="caret"># _</span>
+<header class="header">
+    <a href="{{ "/" | relLangURL }}" title="Home">[{{ .Site.Title }}]</a>
+    <span class="caret">$ _</span>
 </header>
-
-<footer>
-    <span class="copyright">
-        {{ $dateMissing := eq .Date.Year 1 -}}
-        © {{ if eq $dateMissing true }}{{ .Site.LastChange.Format "2006" }}{{ else }}{{ .Date.Format "2006" }} {{ end }} {{ .Site.Title }}.
-        {{ with .Site.GetPage "page" "licenses.md" }}<a href="{{ .Permalink }}">Licenses</a>.{{ end }}
-        {{ with .Site.GetPage "page" "colophon.md" }}<a href="{{ .Permalink }}">Colophon</a>.{{ end }}
-    </span>
-</footer>
 
 </body>
 </html>
