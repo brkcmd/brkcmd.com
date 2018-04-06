@@ -1,13 +1,14 @@
-{{ $postlimit := .Site.Params.homepagepostlimit | default "5" -}}
 {{ $postsection := .Site.Params.postsection | default "post" -}}
 <main role="main" class="homepage h-feed" itemscope itemtype="http://schema.org/Blog">
 
     <h1 class="headline p-name">Recent Posts</h1>
 
     <div class="article-list">
-        {{ range first $postlimit (where .Data.Pages "Section" $postsection) }}
+        <ol>
+        {{ range (where .Data.Pages "Section" $postsection) }}
         {{ partial "post-list-item.html" . }}
         {{ end }}
+        <ol>
     </div>
 
 </main>

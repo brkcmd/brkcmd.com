@@ -2,8 +2,12 @@
 <main role="main" class="h-feed" itemscope itemtype="http://schema.org/Blog">
   {{ $collective_phrase := index .Site.Params.collectivephrases .Data.Singular | default "marked as" -}}
   <h1 class="list-title p-name">Posts {{ $collective_phrase }} <samp>{{ .Name | lower }}</samp></h1>
+  <div class="article-list">
+    <ol>
   {{ range .Data.Pages }}
     {{ partial "post-list-item.html" . }}
   {{ end }}
+    </ol>
+  </div>
 </main>
 {{ partial "footer.html" . }}

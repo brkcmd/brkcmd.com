@@ -1,7 +1,7 @@
     <aside class="sidebar">
         {{ with $.Site.Taxonomies.categories -}}
         <nav class="sidebar categories">
-            <h2 class="headline">Categories</h1>
+            <h2 class="headline">Categories</h2>
 
             <ul>
                 {{ range $name, $value := . }}
@@ -16,7 +16,7 @@
 
         {{ with $.Site.Taxonomies.tags -}}
         <nav class="sidebar tags">
-            <h2 class="headline">Tags</h1>
+            <h2 class="headline">Tags</h2>
 
             <ul>
                 {{ range $name, $value := . }}

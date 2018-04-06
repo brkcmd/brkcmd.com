@@ -1,13 +1,12 @@
 {{ $dateMissing := eq .Date.Year 1 -}}
-<article class="h-entry" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-  <h2 class="headline p-name" itemprop="headline"><a class="u-url" itemprop="url" href="{{ .RelPermalink }}">{{ .Title }}{{ if .Draft }} (Draft){{ end }}</a></h2>
-  <div class="meta">
+<li class="h-entry" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+  <p class="p-name" itemprop="headline">
+  <a class="u-url" itemprop="url" href="{{ .RelPermalink }}">{{ .Title }}{{ if .Draft }} (Draft){{ end }}</a>
 {{ if eq $dateMissing false }}
-    <span class="key">published on</span>
-    <span class="val"><time class="dt-published" itemprop="datePublished" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 02, 2006" }}</time></span>
+  <span class="meta">(<time class="dt-published" itemprop="datePublished" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2006" }}</time>)</span>
 {{ end }}
-  </div>
-  <div class="summary p-summary">
-    {{ .Summary }} {{ if .Truncated }} ... <a href="{{ .RelPermalink }}">(read more)</a>{{ end }}
-  </div>
-</article>
+  </p>
+  <blockquote class="summary p-summary">
+    {{ .Summary }}{{ if .Truncated }}&nbsp;…&nbsp;<a href="{{ .RelPermalink }}">(read more)</a>{{ end }}
+  </blockquote>
+</li>
