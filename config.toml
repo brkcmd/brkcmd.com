@@ -1,8 +1,22 @@
 baseurl = "https://www.flaky.io/"
+disableKinds = ["taxonomyTerm", "section"]
+enableemoji = false
 languageCode = "en-us"
-title = "brkcmd"
+newContentEditor = "sensible-editor"
+paginatePath = "page"
+publishDir = "public"
+preserveTaxonomyNames = true
+pygmentsStyle = "monokai"
+pygmentsCodeFences = true
+pygmentsCodeFencesGuessSyntax = false
+pygmentsUseClasses = true
+pygmentsOptions = "linenos=table"
 theme = "tanaka"
+title = "brkcmd"
 uglyurls = true
+
+[blackfriday]
+    smartypants = false
 
 [taxonomies]
     tag = "tags"
@@ -13,6 +27,7 @@ uglyurls = true
     home = [ "HTML", "Atom" ]
     section = [ "HTML", "Atom" ]
     taxonomy = [ "HTML", "Atom" ]
+    taxonomyTerm = [ "HTML", "Atom" ]
 
 [mediaTypes]
     [mediaTypes."application/atom"]
