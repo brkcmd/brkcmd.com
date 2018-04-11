@@ -31,13 +31,16 @@
     </aside>
 
     <footer class="footer">
-        <span class="copyright">
+        <p class="copyright">
             {{ $dateMissing := eq .Date.Year 1 -}}
             © {{ if eq $dateMissing true }}{{ .Site.LastChange.Format "2006" }}{{ else }}{{ .Date.Format "2006" }} {{ end }} {{ .Site.Title }}.
             {{ with .Site.Params.license }}<a href="{{ .url }} ">{{ .name }}</a>.{{ end }}
             {{ with .Site.GetPage "page" "licenses.md" }}<a href="{{ .Permalink }}">Licenses</a>.{{ end }}
             {{ with .Site.GetPage "page" "colophon.md" }}<a href="{{ .Permalink }}">Colophon</a>.{{ end }}
-        </span>
+        </p>
+        <p class="contact">
+        {{ with .Site.Params.contactemail }}Questions? Comments? Let me know: <a href="mailto:{{.}}?subject={{ $.Site.Params.contactsubject }}">{{ . }}</a>.{{ end }}
+        </p>
     </footer>
 
 </div>{{/* /container */}}
