@@ -41,6 +41,8 @@ uglyurls = true
 
 [params]
     feedlimit = 20
+    contactemail = "editor@brkcmd.com"
+    contactsubject = "Interesting, but did you consider this?"
     [params.collectivephrases]
         tag = "tagged as"
         category = "categorized as"
