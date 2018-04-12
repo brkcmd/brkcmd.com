@@ -3,6 +3,7 @@ disableKinds = ["taxonomyTerm", "section"]
 enableemoji = false
 languageCode = "en-us"
 newContentEditor = "sensible-editor"
+paginate = 10
 paginatePath = "page"
 publishDir = "public"
 preserveTaxonomyNames = true

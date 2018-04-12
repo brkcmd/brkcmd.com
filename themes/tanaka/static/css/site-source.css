@@ -107,3 +107,10 @@ pre, figure {
 .article-list ol {
     list-style-type: square;
 }
+
+.pagination {
+    text-align: center;
+}
+.pagination .current {
+    font-weight: bold;
+}

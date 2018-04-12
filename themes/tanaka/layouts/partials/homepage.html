@@ -5,10 +5,12 @@
 
     <div class="article-list">
         <ol>
-        {{ range (where .Data.Pages "Section" $postsection) }}
+        {{ $pag := .Paginate (where .Data.Pages "Section" $postsection) }}
+        {{ range $pag.Pages }}
         {{ partial "post-list-item.html" . }}
         {{ end }}
         <ol>
     </div>
 
+    {{ partial "pagination.html" . }}
 </main>
