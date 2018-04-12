@@ -1,0 +1,144 @@
+@font-face {
+	font-family: 'Merriweather Sans';
+	font-style: normal;
+	font-weight: 300;
+	src:
+		local('Merriweather Sans Light'),
+		local('MerriweatherSans-Light'),
+		/* from https://fonts.gstatic.com/s/merriweathersans/v9/2-c49IRs1JiJN1FRAMjTN5zd9vgsFH1eYCDK0hI.eot */
+		url('../fonts/Merriweather_Sans_300.eot?#iefix') format('embedded-opentype'),
+		/* from https://fonts.gstatic.com/s/merriweathersans/v9/2-c49IRs1JiJN1FRAMjTN5zd9vgsFH1eYCDK0hA.woff */
+		url('../fonts/Merriweather_Sans_300.woff') format('woff'),
+		/* from https://fonts.gstatic.com/s/merriweathersans/v9/2-c49IRs1JiJN1FRAMjTN5zd9vgsFH1eYCDK0hY.woff2 */
+		url('../fonts/Merriweather_Sans_300.woff2') format('woff2'),
+		/* from https://fonts.gstatic.com/l/font?kit=2-c49IRs1JiJN1FRAMjTN5zd9vgsFH1eYCDK0hE&skey=f2526645647a84ff&v=v9#MerriweatherSans */
+		url('../fonts/Merriweather_Sans_300.svg#MerriweatherSans') format('svg'),
+		/* from https://fonts.gstatic.com/s/merriweathersans/v9/2-c49IRs1JiJN1FRAMjTN5zd9vgsFH1eYCDK0hM.ttf */
+		url('../fonts/Merriweather_Sans_300.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Merriweather Sans';
+	font-style: italic;
+	font-weight: 300;
+	src:
+		local('Merriweather Sans Light Italic'),
+		local('MerriweatherSans-LightItalic'),
+		/* from https://fonts.gstatic.com/s/merriweathersans/v9/2-c29IRs1JiJN1FRAMjTN5zd9vgsFHXwepzB4hp-zA.eot */
+		url('../fonts/Merriweather_Sans_300i.eot?#iefix') format('embedded-opentype'),
+		/* from https://fonts.gstatic.com/s/merriweathersans/v9/2-c29IRs1JiJN1FRAMjTN5zd9vgsFHXwepzB4hp-zg.woff */
+		url('../fonts/Merriweather_Sans_300i.woff') format('woff'),
+		/* from https://fonts.gstatic.com/s/merriweathersans/v9/2-c29IRs1JiJN1FRAMjTN5zd9vgsFHXwepzB4hp-yA.woff2 */
+		url('../fonts/Merriweather_Sans_300i.woff2') format('woff2'),
+		/* from https://fonts.gstatic.com/l/font?kit=2-c29IRs1JiJN1FRAMjTN5zd9vgsFHXwepzB4hp-zw&skey=9b01c8cd69965e3e&v=v9#MerriweatherSans */
+		url('../fonts/Merriweather_Sans_300i.svg#MerriweatherSans') format('svg'),
+		/* from https://fonts.gstatic.com/s/merriweathersans/v9/2-c29IRs1JiJN1FRAMjTN5zd9vgsFHXwepzB4hp-zQ.ttf */
+		url('../fonts/Merriweather_Sans_300i.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Merriweather Sans';
+	font-style: normal;
+	font-weight: 400;
+	src:
+		local('Merriweather Sans'),
+		local('MerriweatherSans-Regular'),
+		/* from https://fonts.gstatic.com/s/merriweathersans/v9/2-c99IRs1JiJN1FRAMjTN5zd9vgsFHX7QjE.eot */
+		url('../fonts/Merriweather_Sans_400.eot?#iefix') format('embedded-opentype'),
+		/* from https://fonts.gstatic.com/s/merriweathersans/v9/2-c99IRs1JiJN1FRAMjTN5zd9vgsFHX7QjM.woff */
+		url('../fonts/Merriweather_Sans_400.woff') format('woff'),
+		/* from https://fonts.gstatic.com/s/merriweathersans/v9/2-c99IRs1JiJN1FRAMjTN5zd9vgsFHX7QjU.woff2 */
+		url('../fonts/Merriweather_Sans_400.woff2') format('woff2'),
+		/* from https://fonts.gstatic.com/l/font?kit=2-c99IRs1JiJN1FRAMjTN5zd9vgsFHX7QjI&skey=d5dbcab03e19f051&v=v9#MerriweatherSans */
+		url('../fonts/Merriweather_Sans_400.svg#MerriweatherSans') format('svg'),
+		/* from https://fonts.gstatic.com/s/merriweathersans/v9/2-c99IRs1JiJN1FRAMjTN5zd9vgsFHX7QjA.ttf */
+		url('../fonts/Merriweather_Sans_400.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Merriweather Sans';
+	font-style: italic;
+	font-weight: 400;
+	src:
+		local('Merriweather Sans Italic'),
+		local('MerriweatherSans-Italic'),
+		/* from https://fonts.gstatic.com/s/merriweathersans/v9/2-c79IRs1JiJN1FRAMjTN5zd9vgsFHXwcjnj8w.eot */
+		url('../fonts/Merriweather_Sans_400i.eot?#iefix') format('embedded-opentype'),
+		/* from https://fonts.gstatic.com/s/merriweathersans/v9/2-c79IRs1JiJN1FRAMjTN5zd9vgsFHXwcjnj8Q.woff */
+		url('../fonts/Merriweather_Sans_400i.woff') format('woff'),
+		/* from https://fonts.gstatic.com/s/merriweathersans/v9/2-c79IRs1JiJN1FRAMjTN5zd9vgsFHXwcjnj9w.woff2 */
+		url('../fonts/Merriweather_Sans_400i.woff2') format('woff2'),
+		/* from https://fonts.gstatic.com/l/font?kit=2-c79IRs1JiJN1FRAMjTN5zd9vgsFHXwcjnj8A&skey=72a671c1f23a2f55&v=v9#MerriweatherSans */
+		url('../fonts/Merriweather_Sans_400i.svg#MerriweatherSans') format('svg'),
+		/* from https://fonts.gstatic.com/s/merriweathersans/v9/2-c79IRs1JiJN1FRAMjTN5zd9vgsFHXwcjnj8g.ttf */
+		url('../fonts/Merriweather_Sans_400i.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Merriweather Sans';
+	font-style: normal;
+	font-weight: 700;
+	src:
+		local('Merriweather Sans Bold'),
+		local('MerriweatherSans-Bold'),
+		/* from https://fonts.gstatic.com/s/merriweathersans/v9/2-c49IRs1JiJN1FRAMjTN5zd9vgsFH1OZyDK0hI.eot */
+		url('../fonts/Merriweather_Sans_700.eot?#iefix') format('embedded-opentype'),
+		/* from https://fonts.gstatic.com/s/merriweathersans/v9/2-c49IRs1JiJN1FRAMjTN5zd9vgsFH1OZyDK0hA.woff */
+		url('../fonts/Merriweather_Sans_700.woff') format('woff'),
+		/* from https://fonts.gstatic.com/s/merriweathersans/v9/2-c49IRs1JiJN1FRAMjTN5zd9vgsFH1OZyDK0hY.woff2 */
+		url('../fonts/Merriweather_Sans_700.woff2') format('woff2'),
+		/* from https://fonts.gstatic.com/l/font?kit=2-c49IRs1JiJN1FRAMjTN5zd9vgsFH1OZyDK0hE&skey=d85cd7b3d911b492&v=v9#MerriweatherSans */
+		url('../fonts/Merriweather_Sans_700.svg#MerriweatherSans') format('svg'),
+		/* from https://fonts.gstatic.com/s/merriweathersans/v9/2-c49IRs1JiJN1FRAMjTN5zd9vgsFH1OZyDK0hM.ttf */
+		url('../fonts/Merriweather_Sans_700.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Merriweather Sans';
+	font-style: italic;
+	font-weight: 700;
+	src:
+		local('Merriweather Sans Bold Italic'),
+		local('MerriweatherSans-BoldItalic'),
+		/* from https://fonts.gstatic.com/s/merriweathersans/v9/2-c29IRs1JiJN1FRAMjTN5zd9vgsFHXweozG4hp-zA.eot */
+		url('../fonts/Merriweather_Sans_700i.eot?#iefix') format('embedded-opentype'),
+		/* from https://fonts.gstatic.com/s/merriweathersans/v9/2-c29IRs1JiJN1FRAMjTN5zd9vgsFHXweozG4hp-zg.woff */
+		url('../fonts/Merriweather_Sans_700i.woff') format('woff'),
+		/* from https://fonts.gstatic.com/s/merriweathersans/v9/2-c29IRs1JiJN1FRAMjTN5zd9vgsFHXweozG4hp-yA.woff2 */
+		url('../fonts/Merriweather_Sans_700i.woff2') format('woff2'),
+		/* from https://fonts.gstatic.com/l/font?kit=2-c29IRs1JiJN1FRAMjTN5zd9vgsFHXweozG4hp-zw&skey=7feceef78736c4e8&v=v9#MerriweatherSans */
+		url('../fonts/Merriweather_Sans_700i.svg#MerriweatherSans') format('svg'),
+		/* from https://fonts.gstatic.com/s/merriweathersans/v9/2-c29IRs1JiJN1FRAMjTN5zd9vgsFHXweozG4hp-zQ.ttf */
+		url('../fonts/Merriweather_Sans_700i.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Merriweather Sans';
+	font-style: normal;
+	font-weight: 800;
+	src:
+		local('Merriweather Sans ExtraBold'),
+		local('MerriweatherSans-ExtraBold'),
+		/* from https://fonts.gstatic.com/s/merriweathersans/v9/2-c49IRs1JiJN1FRAMjTN5zd9vgsFH1SZCDK0hI.eot */
+		url('../fonts/Merriweather_Sans_800.eot?#iefix') format('embedded-opentype'),
+		/* from https://fonts.gstatic.com/s/merriweathersans/v9/2-c49IRs1JiJN1FRAMjTN5zd9vgsFH1SZCDK0hA.woff */
+		url('../fonts/Merriweather_Sans_800.woff') format('woff'),
+		/* from https://fonts.gstatic.com/s/merriweathersans/v9/2-c49IRs1JiJN1FRAMjTN5zd9vgsFH1SZCDK0hY.woff2 */
+		url('../fonts/Merriweather_Sans_800.woff2') format('woff2'),
+		/* from https://fonts.gstatic.com/l/font?kit=2-c49IRs1JiJN1FRAMjTN5zd9vgsFH1SZCDK0hE&skey=c5fa14f5cb573efb&v=v9#MerriweatherSans */
+		url('../fonts/Merriweather_Sans_800.svg#MerriweatherSans') format('svg'),
+		/* from https://fonts.gstatic.com/s/merriweathersans/v9/2-c49IRs1JiJN1FRAMjTN5zd9vgsFH1SZCDK0hM.ttf */
+		url('../fonts/Merriweather_Sans_800.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Merriweather Sans';
+	font-style: italic;
+	font-weight: 800;
+	src:
+		local('Merriweather Sans ExtraBold Italic'),
+		local('MerriweatherSans-ExtraBoldItalic'),
+		/* from https://fonts.gstatic.com/s/merriweathersans/v9/2-c29IRs1JiJN1FRAMjTN5zd9vgsFHXwepDF4hp-zA.eot */
+		url('../fonts/Merriweather_Sans_800i.eot?#iefix') format('embedded-opentype'),
+		/* from https://fonts.gstatic.com/s/merriweathersans/v9/2-c29IRs1JiJN1FRAMjTN5zd9vgsFHXwepDF4hp-zg.woff */
+		url('../fonts/Merriweather_Sans_800i.woff') format('woff'),
+		/* from https://fonts.gstatic.com/s/merriweathersans/v9/2-c29IRs1JiJN1FRAMjTN5zd9vgsFHXwepDF4hp-yA.woff2 */
+		url('../fonts/Merriweather_Sans_800i.woff2') format('woff2'),
+		/* from https://fonts.gstatic.com/l/font?kit=2-c29IRs1JiJN1FRAMjTN5zd9vgsFHXwepDF4hp-zw&skey=c46cf4e59b4d7e5e&v=v9#MerriweatherSans */
+		url('../fonts/Merriweather_Sans_800i.svg#MerriweatherSans') format('svg'),
+		/* from https://fonts.gstatic.com/s/merriweathersans/v9/2-c29IRs1JiJN1FRAMjTN5zd9vgsFHXwepDF4hp-zQ.ttf */
+		url('../fonts/Merriweather_Sans_800i.ttf') format('truetype');
+}
