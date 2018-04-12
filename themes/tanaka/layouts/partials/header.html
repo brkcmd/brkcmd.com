@@ -14,6 +14,7 @@
 {{ .Hugo.Generator }}
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="{{ "/css/site.css" | relURL }}" type="text/css">
+<script src="{{ "/js/site.js" | relURL }}" type="text/javascript"></script>
 {{ with .Site.GetPage "home" }}{{ range .OutputFormats }}{{ if ne .Name "HTML" -}}
 {{ $media_type_suffix := cond (eq .Name "atom") "xml" "" -}}
 <link rel="{{ .Rel }}" href="{{ .RelPermalink }}" type="{{ .MediaType.Type }}{{ with $media_type_suffix }}+{{.}}{{ end }}" title="{{ $.Site.Title }} ({{ .Name | title }} Feed)">
