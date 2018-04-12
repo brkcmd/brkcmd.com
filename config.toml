@@ -11,7 +11,7 @@ pygmentsStyle = "monokai"
 pygmentsCodeFences = true
 pygmentsCodeFencesGuessSyntax = false
 pygmentsUseClasses = true
-pygmentsOptions = "linenos=table"
+pygmentsOptions = ""
 theme = "tanaka"
 title = "brkcmd"
 uglyurls = true
