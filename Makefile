@@ -12,16 +12,30 @@ NETLIFY = $(shell command -v netlify ; )
 POSTCSS = $(shell command -v postcss ; )
 
 .PHONY: build
-build:
+build: build-assets
 	$(if $(HUGO),,$(error "hugo not found, try running `apt install hugo`"))
 	$(HUGO) --cleanDestinationDir --destination public -v
 
-.PHONY: build-tanaka build-tanaka-css 
-build-tanaka: build-tanaka-css
+.PHONY: build-assets build-css build-theme-css build-js build-theme-js
+build-assets: build-css build-js
 
+build-css: build-theme-css
+	$(if $(POSTCSS),,$(error "postcss not found, try running `npm i`"))
+	$(POSTCSS) static/css/site-source.css -o static/css/site.css
+
+build-theme-css: build-tanaka-css
+
+.PHONY: build-tanaka-css
 build-tanaka-css:
 	$(if $(POSTCSS),,$(error "postcss not found, try running `npm i`"))
 	$(POSTCSS) themes/tanaka/static/css/site-source.css -o themes/tanaka/static/css/site.css
+
+build-js: build-theme-js
+
+build-theme-js: build-tanaka-js
+
+.PHONY: build-tanaka-js
+build-tanaka-js:
 
 .PHONY: serve
 serve:
