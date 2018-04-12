@@ -1,11 +1,11 @@
 name = "Tanaka"
 license = "MIT"
-# licenselink = ""
+licenselink = "https://opensource.org/licenses/MIT"
 # description = ""
 # homepage = ""
 tags = ["blog", "syntax highlighting"]
 features = ["blog", "syntax highlighting"]
-min_version = "0.37"
+min_version = "0.38"
 
 [author]
   name = "brkcmd"

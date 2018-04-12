@@ -30,24 +30,10 @@ uglyurls = true
     taxonomy = [ "HTML", "Atom" ]
     taxonomyTerm = [ "HTML", "Atom" ]
 
-[mediaTypes]
-    [mediaTypes."application/atom"]
-        suffix = "atom.xml"
-
-[outputFormats]
-    [outputFormats.Atom]
-        mediaType = "application/atom"
-        baseName = "index"
-        isPlainText = false
-
 [params]
     feedlimit = 20
     contactemail = "editor@brkcmd.com"
     contactsubject = "Interesting, but did you consider this?"
-    [params.collectivephrases]
-        tag = "tagged as"
-        category = "categorized as"
-        series = "in the series"
     [params.license]
         name = "CC-BY-SA 4.0"
         url = "https://creativecommons.org/licenses/by-sa/4.0/"

@@ -1,0 +1,21 @@
+[mediaTypes]
+    [mediaTypes."application/atom"]
+        suffix = "atom.xml"
+
+[outputFormats]
+    [outputFormats.Atom]
+        mediaType = "application/atom"
+        baseName = "index"
+        isPlainText = false
+
+[params]
+    feedlimit = 10
+    contactemail = "example@example.org"
+    contactsubject = ""
+    [params.collectivephrases]
+        tag = "tagged as"
+        category = "categorized as"
+        series = "in the series"
+    [params.license]
+        name = "CC-BY-NC-DC 4.0"
+        url = "https://creativecommons.org/licenses/by-nc-nd/4.0/"
