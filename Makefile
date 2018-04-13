@@ -11,31 +11,39 @@ HUGO = $(shell command -v hugo ; )
 NETLIFY = $(shell command -v netlify ; )
 POSTCSS = $(shell command -v postcss ; )
 
+.DEFAULT_TARGET = build
+
 .PHONY: build
 build: build-assets
 	$(if $(HUGO),,$(error "hugo not found, try running `apt install hugo`"))
 	$(HUGO) --cleanDestinationDir --destination public -v
 
-.PHONY: build-assets build-css build-theme-css build-js build-theme-js
+.PHONY: build-assets
 build-assets: build-css build-js
 
-build-css: build-theme-css
+.PHONY: build-css
+build-css: static/css/site.css build-theme-css
+static/css/site.css: static/css/site-source.css themes/tanaka/static/css/site-source.css
 	$(if $(POSTCSS),,$(error "postcss not found, try running `npm i`"))
-	$(POSTCSS) static/css/site-source.css -o static/css/site.css
+	$(POSTCSS) $< -o $@
 
+.PHONY: build-css build-theme-css
 build-theme-css: build-tanaka-css
-
-.PHONY: build-tanaka-css
-build-tanaka-css:
+build-tanaka-css: themes/tanaka/static/css/site.css
+themes/tanaka/static/css/site.css: themes/tanaka/static/css/site-source.css
 	$(if $(POSTCSS),,$(error "postcss not found, try running `npm i`"))
-	$(POSTCSS) themes/tanaka/static/css/site-source.css -o themes/tanaka/static/css/site.css
+	$(POSTCSS) $< -o $@
 
-build-js: build-theme-js
+.PHONY: build-js
+build-js: static/js/site.js build-theme-js
+static/js/site.js: static/js/site-source.js
+	cp $< $@
 
+.PHONY: build-theme-js build-tanaka-js
 build-theme-js: build-tanaka-js
-
-.PHONY: build-tanaka-js
-build-tanaka-js:
+build-tanaka-js: themes/tanaka/static/js/site.js
+themes/tanaka/static/js/site.js: themes/tanaka/static/js/site-source.js
+	cp $< $@
 
 .PHONY: serve
 serve:
@@ -45,6 +53,10 @@ serve:
 .PHONY: clean
 clean:
 	-rm -r public
+	-rm -f static/css/site.css
+	-rm -f static/js/site.js
+	-rm -f themes/tanaka/static/css/site.css
+	-rm -f themes/tanaka/static/js/site.js
 
 .PHONY: deploy
 deploy: build
