@@ -1,4 +1,4 @@
-baseurl = "https://www.flaky.io/"
+baseurl = "https://www.brkcmd.com/"
 disableKinds = ["taxonomyTerm", "section"]
 enableemoji = false
 languageCode = "en-us"
