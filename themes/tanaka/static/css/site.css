@@ -1014,7 +1014,8 @@ template {
 
 html {
     font-family: "Merriweather", serif;
-    line-height: 1.414;
+    line-height: 28.8px;
+    line-height: 1.8rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -1104,8 +1105,9 @@ pre, figure {
 }
 
 .headline + .meta {
-    margin-top: -22.624px;
-    margin-top: -1.414rem;
+    margin-top: -14.4px;
+    margin-top: -0.9rem;
+    line-height: 1.414;
     font-size: 12.8px;
     font-size: 0.8rem;
 }

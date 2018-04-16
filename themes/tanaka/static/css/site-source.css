@@ -16,7 +16,7 @@
   --global--spacer-sm: .5rem;
   --global--spacer-md: 1rem;
   --global--spacer-lg: 2rem;
-  --global--line-spacing: 1.414;
+  --global--line-spacing: 1.8rem;
 
   --global--text--FontFamily: "Merriweather", serif;
   --global--headline--FontFamily: "Merriweather Sans", sans-serif;
@@ -97,7 +97,8 @@ pre, figure {
     text-decoration: underline;
 }
 .headline + .meta {
-    margin-top: calc(-1 * var(--global--line-spacing) * 1rem);
+    margin-top: calc(-0.5 * var(--global--line-spacing));
+    line-height: 1.414;
     font-size: 0.8rem;
 }
 .body {
