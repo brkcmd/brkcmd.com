@@ -1,14 +1,17 @@
 +++
-title = "Fridays Are For Learning"
+title = "Fridays Are For Learning, 2018-W17"
 date = 2018-04-27T00:05:30-04:00
+lastmod = 2018-04-27T08:36:51-04:00
 tags = ["fafl"]
 categories = ["Learning"]
 series = ["Fridays Are For Learning"]
 +++
 
-<i>Fridays are for learning. If your work won’t let you spend even 10-20% of
-your time keeping up to date with your profession, quit your job and find a
-better one!</i>
+Fridays are for learning.[^1] These are some interesting links for the week
+ending April 27, 2018.
+
+[^1]: If your work won’t let you spend even 10-20% of your time keeping up to
+      date with your profession, quit your job and find a better one!
 
 * [Warehouse](https://pypi.org/) is finally, officially, [the new
 PyPI](https://blog.python.org/2018/04/new-pypi-launched-legacy-pypi-shutting.html).
@@ -54,3 +57,7 @@ live streamed every Friday afternoon at 1 pm US Pacific time
 (Here’s a sample: [TGI Kubernetes 027: Securing the k8s dashboard and
 beyond!](https://www.youtube.com/watch?v=od8TnIvuADg))
 
+* *Late addition:*  [Ubuntu 18.04 LTS is
+out](https://insights.ubuntu.com/2018/04/27/breeze-through-ubuntu-desktop-18-04-lts-bionic-beaver)!
+Check out [what’s
+new](https://www.omgubuntu.co.uk/2018/04/ubuntu-18-04-download-release-features).
