@@ -3,7 +3,7 @@
   <p class="p-name" itemprop="headline">
   <a class="u-url" itemprop="url" href="{{ .RelPermalink }}">{{ .Title }}{{ if .Draft }} (Draft){{ end }}</a>
 {{ if eq $dateMissing false }}
-  <span class="meta">(<time class="dt-published" itemprop="datePublished" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2006" }}</time>)</span>
+  <span class="meta">(<time class="dt-published" itemprop="datePublished" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>)</span>
 {{ end }}
   </p>
   <blockquote class="summary p-summary">
