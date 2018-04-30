@@ -116,8 +116,13 @@ blockquote {
     border-left: 1px solid #ccc;
     padding-left: 2em;
 }
-pre, figure {
+figure {
     overflow-x: auto;
+}
+pre {
+    overflow-x: auto;
+    line-height: initial;
+    padding: 0.5em;
 }
 code {
     background: #eee;

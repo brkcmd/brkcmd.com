@@ -1153,8 +1153,15 @@ blockquote {
     padding-left: 2em;
 }
 
-pre, figure {
+figure {
     overflow-x: auto;
+}
+
+pre {
+    overflow-x: auto;
+    line-height: normal;
+    line-height: initial;
+    padding: 0.5em;
 }
 
 code {
