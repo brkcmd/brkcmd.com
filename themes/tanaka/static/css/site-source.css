@@ -2,7 +2,6 @@
 
 /* Font definitions */
 @import "fonts.css";
-
 @import "syntax.css";
 
 /* Enable box-sizing by default. */
@@ -18,8 +17,8 @@
   --global--spacer-lg: 2rem;
   --global--line-spacing: 1.8rem;
 
-  --global--text--FontFamily: "Merriweather", serif;
-  --global--headline--FontFamily: "Merriweather Sans", sans-serif;
+  --global--text--FontFamily: Roboto, sans-serif;
+  --global--headline--FontFamily: Rubik, sans-serif;
 }
 
 @custom-media --medium-viewport (width >= 720px);
@@ -31,6 +30,44 @@ html {
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--global--headline--FontFamily);
+    font-weight: 500;
+    line-height: 1.2;
+}
+h1 {
+        font-size: 5.06em;
+        font-weight: 300;
+        margin-top: 0.53em;
+        margin-bottom: 0.53em;
+}
+h2 {
+        font-size: 3.33em;
+        font-weight: 400;
+        margin-top: 0.4em;
+        margin-bottom: 0.4em;
+}
+h3 {
+        font-size: 2.25em;
+        font-weight: 500;
+        margin-top: 0.4em;
+        margin-bottom: 0.4em;
+}
+h4 {
+        font-size: 1.5em;
+        font-weight: 500;
+        margin-top: 0.67em;
+        margin-bottom: 0.67em;
+}
+h5 {
+        font-size: 1.06em;
+        font-weight: 500;
+        margin-top: 0.94em;
+        margin-bottom: 0.94em;
+}
+h6 {
+        font-size: 1em;
+        font-weight: 500;
+        margin-top: 1em;
+        margin-bottom: 1em;
 }
 
 /* Set up CSS grid. */
@@ -38,7 +75,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: calc(3*var(--global--spacer-md)) auto;
     padding: 0 var(--global--spacer-md);
     display: grid;
-    grid-gap: var(--global--spacer-md);
+    grid-gap: var(--global--spacer-lg);
     grid-template-columns: 100%;
 }
 @media (--medium-viewport) {
@@ -89,6 +126,9 @@ pre, figure {
     color: inherit;
 }
 
+.headline {
+    margin-bottom: 0;
+}
 .headline a, .headline a:link {
     text-decoration: none;
     color: inherit;
@@ -96,9 +136,17 @@ pre, figure {
 .headline a:hover {
     text-decoration: underline;
 }
-.headline + .meta {
-    margin-top: calc(-0.5 * var(--global--line-spacing));
-    line-height: 1.414;
+
+.sidebar {
+    margin-top: var(--global--spacer-lg);
+}
+.sidebar .headline {
+    font-size: 1.67em;
+}
+
+.meta {
+    text-align: right;
+    line-height: 1.2;
     font-size: 0.8rem;
 }
 .body {
