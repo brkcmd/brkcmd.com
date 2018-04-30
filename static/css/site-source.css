@@ -74,3 +74,6 @@
     border-radius: 50%;
     cursor: pointer;
 }
+
+a[href^="#fn:"]:before{ content: '[' }
+a[href^="#fn:"]:after{ content: ']' }

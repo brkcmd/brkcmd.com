@@ -29,3 +29,12 @@
         e.preventDefault();
     }
 })();
+
+document.addEventListener("DOMContentLoaded", function() {
+    /* Work around buggy markdown->html generator. */
+    var fnr = document.querySelectorAll("p + a.footnote-return");
+    for (var i = 0; i < fnr.length; i++) {
+        fnr[i].previousElementSibling.appendChild(fnr[i]);
+        fnr[i].insertAdjacentHTML("beforebegin", "&nbsp;");
+    }
+});

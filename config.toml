@@ -1,6 +1,7 @@
 baseurl = "https://www.brkcmd.com/"
 disableKinds = ["taxonomyTerm", "section"]
 enableemoji = false
+footnotereturnlinkcontents = "↩"
 languageCode = "en-us"
 newContentEditor = "sensible-editor"
 paginate = 10
