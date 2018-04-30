@@ -3,14 +3,12 @@
 
     <h1 class="headline p-name">Recent Posts</h1>
 
-    <div class="article-list">
-        <ol>
-        {{ $pag := .Paginate (where .Data.Pages "Section" $postsection) }}
-        {{ range $pag.Pages }}
-        {{ partial "post-list-item.html" . }}
-        {{ end }}
-        <ol>
-    </div>
+    <ol class="article-list">
+    {{ $pag := .Paginate (where .Data.Pages "Section" $postsection) }}
+    {{ range $pag.Pages }}
+    {{ partial "post-list-item.html" . }}
+    {{ end }}
+    <ol>
 
     {{ partial "pagination.html" . }}
 </main>

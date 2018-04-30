@@ -3,14 +3,13 @@
 
   <h1 class="list-title p-name">{{ .Title }}</h1>
 
-  <div class="article-list">
-      <ol>
+  <ol class="article-list">
       {{ $pag := .Paginate .Data.Pages 1 }}
       {{ range $pag.Pages }}
       {{ partial "post-list-item.html" . }}
       {{ end }}
-      </ol>
-      {{ partial "pagination.html" . }}
-  </div>
+  </ol>
+
+  {{ partial "pagination.html" . }}
 </main>
 {{ partial "footer.html" . }}

@@ -1,6 +1,6 @@
 {{ $dateMissing := eq .Date.Year 1 -}}
 <article class="single h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-  <h1 class="headline p-name" itemprop="headline"><a class="u-url" itemprop="url" href="{{ .RelPermalink }}">{{ .Title }}{{ if .Draft }} (Draft){{ end }}</a></h1>
+  <h1 class="headline p-name" itemprop="headline"><a class="u-url headline__link" itemprop="url" href="{{ .RelPermalink }}">{{ .Title }}{{ if .Draft }} (Draft){{ end }}</a></h1>
   <div class="meta">
 {{ if eq $dateMissing false }}
     <span class="key">published on</span>

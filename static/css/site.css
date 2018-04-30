@@ -1044,8 +1044,7 @@ template {
 
 html {
     font-family: Roboto, sans-serif;
-    line-height: 28.8px;
-    line-height: 1.8rem;
+    line-height: 1.8;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -1055,15 +1054,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-        font-size: 5.06em;
+        font-size: 3em;
         font-weight: 300;
         margin-top: 0.53em;
         margin-bottom: 0.53em;
 }
 
 h2 {
-        font-size: 3.33em;
-        font-weight: 400;
+        font-size: 2.5em;
+        font-weight: 300;
         margin-top: 0.4em;
         margin-bottom: 0.4em;
 }
@@ -1109,6 +1108,18 @@ h6 {
 }
 
 @media (min-width: 720px) {
+    h1 {
+            font-size: 5.06em;
+            font-weight: 300;
+            margin-top: 0.53em;
+            margin-bottom: 0.53em;
+    }
+    h2 {
+            font-size: 3.33em;
+            font-weight: 300;
+            margin-top: 0.4em;
+            margin-bottom: 0.4em;
+    }
     .container {
         grid-template-columns: minmax(0.75vw, 3fr) 1fr;
         max-width: 1280px;
@@ -1130,7 +1141,7 @@ h6 {
     }
 }
 
-footer {
+.footer {
     margin: 16px auto;
     margin: 1rem auto;
     text-align: center;
@@ -1139,12 +1150,20 @@ footer {
 blockquote {
     margin-left: 0;
     border-left: 1px solid #ccc;
-    padding-left: 32px;
-    padding-left: 2rem;
+    padding-left: 2em;
 }
 
 pre, figure {
     overflow-x: auto;
+}
+
+code {
+    background: #eee;
+    font-family: 'DejaVu Sans Mono', monospace;
+}
+
+pre code {
+    background: inherit;
 }
 
 /* Style header and footer. */
@@ -1164,7 +1183,7 @@ pre, figure {
     line-height: 1;
 }
 
-.header a, .header a:link, .header a:hover {
+.header__homelink, .header__homelink:link, .header__homelink:hover {
     text-decoration: none;
     color: inherit;
 }
@@ -1173,12 +1192,12 @@ pre, figure {
     margin-bottom: 0;
 }
 
-.headline a, .headline a:link {
+.headline__link, .headline__link:link {
     text-decoration: none;
     color: inherit;
 }
 
-.headline a:hover {
+.headline__link:hover {
     text-decoration: underline;
 }
 
@@ -1194,8 +1213,7 @@ pre, figure {
 .meta {
     text-align: right;
     line-height: 1.2;
-    font-size: 12.8px;
-    font-size: 0.8rem;
+    font-size: 0.8em;
 }
 
 .body {
@@ -1203,7 +1221,7 @@ pre, figure {
     margin-top: 1rem;
 }
 
-.article-list ol {
+.article-list {
     list-style-type: square;
 }
 
