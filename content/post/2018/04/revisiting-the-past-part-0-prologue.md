@@ -9,7 +9,7 @@ series = [ "Revisiting Past Project: Faces" ]
 Recently I’ve been thinking about how much easier it is to achieve quite
 complex things these days compared to back in The Olden Days. In fact, it
 almost feels like we suffer from a surfeit of mature, high quality pieces that
-we can use to build almost anything these days.[^1]
+we can use to build almost anything.[^1]
 
 [^1]: Accordingly, our goals have only gotten more ambitious, not unlike the
       way that computer systems in general expand to fill the increasing disk
@@ -86,16 +86,18 @@ manual adjustments to keep the tracking going due to things like head turns
 and nodding.
 
 The only remaining problem is how to get the data out of Blender. For this, we
-can make use of Blender’s extreme extensibility, and write a small script for
-Blender that iterates over our tracker paths and outputs the coordinates of
-the tracker and the corners of the tracking box at each frame, based on some
+can make use of Blender’s extreme extensibility, and write a small script that
+iterates over our tracker paths and outputs the coordinates of the tracker and
+the corners of the tracking box at each frame, based on some
 [fragments](https://blender.stackexchange.com/questions/65518/export-track-markers-to-csv)
 of [code](https://gist.github.com/groakat/e7d8394d57fd4d3fe016) floating
 around in Blender land.
 
 ```py3
-import bpy
+"""Python 3 Blender script to output tracker data for each frame of a clip."""
 from functools import reduce
+
+import bpy  # Blender interface module
 
 
 def process_clip(clip):
@@ -126,12 +128,12 @@ def save_tracking(fh, track, clip):
                 corners[4]*width, corners[5]*height,
                 corners[6]*width, corners[7]*height
             ]
-            print('{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10}'.format(
+            print(','.join(map(str, [
                 framenum,
                 coords[0]*width,
                 coords[1]*height,
                 *corners
-            ), file=fh)
+            ])), file=fh)
 
 
 for clip in bpy.data.movieclips:
