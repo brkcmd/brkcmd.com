@@ -1,5 +1,5 @@
 +++
-title = "Fridays Are For Learning, 2018-W17"
+title = "Fridays Are For Learning, 2018-W17."
 date = 2018-04-27T00:05:30-04:00
 lastmod = 2018-04-27T08:36:51-04:00
 tags = ["fafl"]

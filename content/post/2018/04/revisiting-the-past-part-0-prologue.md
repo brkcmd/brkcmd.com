@@ -1,5 +1,5 @@
 +++
-title = "Revisiting a past project, part 0"
+title = "Revisiting a past project, part 0."
 date = 2018-04-30T14:51:02-04:00
 tags = [ "video compositing", "python", "web", "blender" ]
 categories = [ "Programming", "Implementation" ]
