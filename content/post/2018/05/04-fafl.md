@@ -67,7 +67,7 @@ Debian accidentally [broke `python3 -m venv`] in `sid`.  We’re gonna have to
 figure this out; hopefully there will be some hallway conversations about this
 at [PyCon US 2018] next week.
 
-[xkcd complained]: https://www.cockroachlabs.com/blog/kubernetes-state-of-stateful-apps/
+[xkcd complained]: https://xkcd.com/1987/
 [broke `python3 -m venv`]: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=897121
 [PyCon US 2018]: https://us.pycon.org/2018/
 
