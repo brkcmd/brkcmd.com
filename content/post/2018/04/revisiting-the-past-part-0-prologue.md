@@ -3,7 +3,7 @@ title = "Revisiting a past project, part 0."
 date = 2018-04-30T14:51:02-04:00
 tags = [ "video compositing", "python", "web", "blender" ]
 categories = [ "Programming", "Implementation" ]
-series = [ "Revisiting Past Project: Faces" ]
+series = [ "Revisiting a Past Project: Faces" ]
 +++
 
 Recently I’ve been thinking about how much easier it is to achieve quite
