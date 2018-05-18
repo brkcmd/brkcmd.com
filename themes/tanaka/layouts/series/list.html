@@ -1,0 +1,16 @@
+{{ partial "header.html" . }}
+<main role="main" class="h-feed" itemscope itemtype="http://schema.org/Blog">
+  <h1 class="list-title p-name">Posts in the series <samp>{{ .Name }}</samp></h1>
+
+  <ol class="article-list">
+      {{ $pag := .Paginate .Data.Pages }}
+      {{ range $pag.Pages }}
+      {{ partial "post-list-item.html" . }}
+      {{ end }}
+  </ol>
+
+  {{ partial "pagination.html" . }}
+
+</main>
+{{ partial "footer.html" . }}
+
