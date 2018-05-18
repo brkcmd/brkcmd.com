@@ -2,7 +2,7 @@
 title = "Fridays Are For Learning, 2018-W20: PyCon US 2018 Part 1."
 date = 2018-05-18T07:14:54-04:00
 tags = ["fafl", "pycon", "pycon us", "pycon us 2018"]
-categories = ["Fridays Are For Learning"]
+categories = ["Learning"]
 series = ["Fridays Are For Learning"]
 +++
 
