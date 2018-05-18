@@ -23,6 +23,15 @@
 {{ end }}
     </span>
 {{ end }}
+{{ with .Params.series }}{{ $count := len . }}
+    <br>
+    <span class="key">series:</span>
+    <span class="val">
+{{ range $index, $value := . }}
+        <a class="p-category" href="{{ "/" | relLangURL }}series/{{ . | urlize }}.html">{{ . }}</a>{{ if ne (add $index 1) $count }},{{ end }}
+{{ end }}
+    </span>
+{{ end }}
   </div>
   <div class="body e-content" itemprop="articleBody">
     {{ .Content }}
