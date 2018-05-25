@@ -1357,6 +1357,10 @@ pre code {
     cursor: pointer;
 }
 
+.scaled img {
+    max-width: 100%;
+}
+
 a[href^="#fn:"]:before{ content: '[' }
 
 a[href^="#fn:"]:after{ content: ']' }
