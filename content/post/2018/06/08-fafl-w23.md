@@ -27,10 +27,10 @@ specific technology, but the insights are definitely not restricted to Go.[^2]
 [Go for industrial programming]: https://peter.bourgon.org/go-for-industrial-programming/
 [the nursery idea]: https://vorpus.org/blog/notes-on-structured-concurrency-or-go-statement-considered-harmful/
 
-* An [experiment with distributed finite state machines], aiming for the
-middle ground between regular task queues (in which workflow must be managed
-by the application) and something like [Airflow], in which an entire external
-system is needed to manage a workflow ([associated repo]).  [Finite state
+* An [experiment with distributed finite state machines]&#x20;(with [associated
+repo]), aiming for the middle ground between regular task queues (in which
+workflow must be managed by the application) and something like [Airflow], in
+which an entire external system is needed to manage a workflow.  [Finite state
 machines] are extremely useful and somewhat undervalued in my opinion.
 
 [experiment with distributed finite state machines]: https://lethain.com/dfsmr/
@@ -41,7 +41,7 @@ machines] are extremely useful and somewhat undervalued in my opinion.
 * [Advanced multi-stage build patterns] for `Dockerfile`s.[^3] After
 struggling against `Dockerfile` limitations for literally years, my interest
 has largely moved on to alternative ways to build container images (such as
-[img], which uses `BuildKit` underneath) but these patterns are useful for
+[img], which uses [`BuildKit`] underneath) but these patterns are useful for
 those still stuck dealing with the current `docker build`.
 
 [^3]: Amusingly, with the introduction of multi-stage builds and build
@@ -51,7 +51,7 @@ those still stuck dealing with the current `docker build`.
 
 [Advanced multi-stage build patterns]: https://medium.com/@tonistiigi/advanced-multi-stage-build-patterns-6f741b852fae
 [img]: https://github.com/genuinetools/img
-[BuildKit]: https://github.com/moby/buildkit
+[`BuildKit`]: https://github.com/moby/buildkit
 
 * On [failure modes], specifically related to software versioning and
 considering `vgo`’s minimal version selection algorithm, which is (as may be
