@@ -7,7 +7,7 @@ THUMB_DIR="$(pwd)/static/thumbs"
 PREFERENCES="maxresdefault sddefault hqdefault"
 
 get_youtube_ids () {
-    rgrep -oh '{{<[[:space:]]\+youtube[[:space:]]\+\(.*\)[[:space:]]\+>}}' $CONTENT_DIR | cut -d' ' -f3 | sort | uniq
+    rgrep --include='*.md' -oh '{{<[[:space:]]\+youtube[[:space:]]\+\(.*\)[[:space:]]\+>}}' $CONTENT_DIR | cut -d' ' -f3 | sort | uniq
 }
 
 download_youtube_thumb () {
