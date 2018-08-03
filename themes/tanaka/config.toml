@@ -1,6 +1,6 @@
 [mediaTypes]
     [mediaTypes."application/atom"]
-        suffix = "atom.xml"
+        suffixes = ["atom.xml"]
 
 [outputFormats]
     [outputFormats.Atom]
