@@ -75,7 +75,7 @@ fill that niche nicely.[^4] There’s some interesting additional comments from
 [release candidate stage]: https://groups.google.com/d/topic/redis-db/9FcwPtutyyQ/discussion
 [Redis Streams]: https://redis.io/topics/streams-intro
 [discussion on the orange]: https://news.ycombinator.com/item?id=17179651
-[my reimplementation project]: {{< taxonomyref "series" "Revisiting a Past Project: Faces" >}}
+[my reimplementation project]: /series/revisiting-a-past-project-faces.html
 
 * Finally, a talk from JSConf EU 2018 by Node.js creator Ryan Dahl, “[10
 Things I Regret About Node.js]”.

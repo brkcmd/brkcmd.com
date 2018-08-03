@@ -13,8 +13,8 @@ series = [ "Revisiting a Past Project: Faces" ]
 technology available these days; for a general overview, please see [the
 prologue].</i>
 
-[a series]: {{< taxonomyref "series" "Revisiting a Past Project: Faces" >}}
-[the prologue]: {{< ref "post/2018/04/revisiting-the-past-part-0-prologue.md" >}}
+[a series]: /series/revisiting-a-past-project-faces.html
+[the prologue]: /post/2018/04/revisiting-the-past-part-0-prologue.html
 
 Continuing on from [last time], the design of the system as a whole is,
 intentionally, pretty boring. I think boringness is underrated by developers
@@ -25,7 +25,7 @@ best way to discover useful new pieces — but when other people are relying on
 your systems, you should reach for what you know works. Luckily these days the
 “stable edge” follows the bleeding edge pretty well (just a bit behind it).
 
-[last time]: {{< ref "post/2018/04/revisiting-the-past-part-0-prologue.md" >}}
+[last time]: /post/2018/04/revisiting-the-past-part-0-prologue.html"
 
 {{< figure src="/post/2018/05/architecture.png" class="scaled" width="100%" link="/post/2018/05/architecture.png" >}}
 

@@ -18,7 +18,7 @@ we saw a major movement toward improving the situation: [experimental BuildKit
 support] was added to the Docker builder.  (You have to opt-in to use it, but
 we’re on our way now!)
 
-[last week]: {{< relref "post/2018/06/08-fafl-w23.md" >}}
+[last week]: {{< relref "/post/2018/06/08-fafl-w23.md" >}}
 [experimental BuildKit support]: https://github.com/moby/moby/pull/37151
 
 * John Resig and Loren Sands-Ramshaw [introduce] the [GraphQL Guide],
