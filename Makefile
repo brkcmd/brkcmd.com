@@ -61,6 +61,11 @@ clean:
 .PHONY: deploy
 deploy: build
 	$(if $(NETLIFY),,$(error "netlify not found, try running `npm i netlify-cli`"))
+	$(NETLIFY) deploy --prod --dir public
+
+.PHONY: deploy-preview
+deploy-preview: build
+	$(if $(NETLIFY),,$(error "netlify not found, try running `npm i netlify-cli`"))
 	$(NETLIFY) deploy --dir public
 
 .PHONY: build-static
