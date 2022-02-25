@@ -10,7 +10,7 @@
   "private": true,
   "devDependencies": {
     "normalize.css": "^8.0.0",
-    "postcss": "^8.4.5",
+    "postcss": "^8.4.7",
     "postcss-cli": "^9.1.0",
     "postcss-import": "^14.0.2",
     "postcss-preset-env": "^7.2.3",
